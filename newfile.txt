@@ -1,0 +1,70 @@
+
+
+6 rows in set (0.00 sec)
+mysql> select * from register;
++---------+------------+-------------------+-------------------+----------+
+| userid  | phoneno    | emailid           | address           | password |
++---------+------------+-------------------+-------------------+----------+
+| arfat   | 1593574568 | arfata@gamil.com  | jogeshwari mumbai | arfat    |
+| farhan  | 9023532658 | mahai@gmail.com   | ghatkopar         | farhan   |
+| furkan  | 4587612354 | furkan@gamil.com  | bhiwandi mumbai   | furkan   |
+| galib   | 7845961384 | galib@gmail.com   | bandra mumbai     | galib    |
+| jawed   | 4568459512 | jawed@gmail.com   | vikhroli mumbai   | jawed    |
+| mahir   | 7896541258 | far@yahoo.co.in   | bandra mumbai     | mahir    |
+| noor    | 4568457412 | noor@gmail.com    | govandi mumbai    | noor     |
+| pikachu | 7895468512 | pikachu@gmail.com | ghatkopar mumbai  | pikavhu  |
+| suraj   | 1596587456 | suraj@gmail.com   | sion mumbai       | suraj    |
+| uzair   | 4586123548 | uzair@gmail.com   | kharghar mumbai   | uzair    |
++---------+------------+-------------------+-------------------+----------+
+10 rows in set (0.00 sec)
+
+s
+mysql> create table cust_name as(select * from register where address="ghatkopar mumbai");
+Query OK, 2 rows affected (0.38 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from cust_name;
++---------+------------+-------------------+------------------+----------+
+| userid  | phoneno    | emailid           | address          | password |
++---------+------------+-------------------+------------------+----------+
+| farhan  | 9023532658 | mahai@gmail.com   | ghatkopar mumbai | farhan   |
+| pikachu | 7895468512 | pikachu@gmail.com | ghatkopar mumbai | pikavhu  |
++---------+------------+-------------------+------------------+----------+
+2 rows in set (0.00 sec)
+mysql> create table info as(select userid,emailid,password from register);
+Query OK, 10 rows affected (0.39 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+mysql> select * from info;
++---------+-------------------+----------+
+| userid  | emailid           | password |
++---------+-------------------+----------+
+| arfat   | arfata@gamil.com  | arfat    |
+| farhan  | mahai@gmail.com   | farhan   |
+| furkan  | furkan@gamil.com  | furkan   |
+| galib   | galib@gmail.com   | galib    |
+| jawed   | jawed@gmail.com   | jawed    |
+| mahir   | far@yahoo.co.in   | mahir    |
+| noor    | noor@gmail.com    | noor     |
+| pikachu | pikachu@gmail.com | pikavhu  |
+| suraj   | suraj@gmail.com   | suraj    |
+| uzair   | uzair@gmail.com   | uzair    |
++---------+-------------------+----------+
+10 rows in set (0.00 sec)
+mysql> create table info1 as(select userid,emailid,password from register where address="ghatkopar mumbai");
+Query OK, 2 rows affected (0.29 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from info1;
++---------+-------------------+----------+
+| userid  | emailid           | password |
++---------+-------------------+----------+
+| farhan  | mahai@gmail.com   | farhan   |
+| pikachu | pikachu@gmail.com | pikavhu  |
++---------+-------------------+----------+
+
+
+
+add bhai
+
+2 rows in set (0.00 sec)
+

@@ -72,5 +72,10 @@ mysql> select * from info1;
 | farhan  | mahai@gmail.com   | farhan   |
 | pikachu | pikachu@gmail.com | pikavhu  |
 +---------+-------------------+----------+
+
+
+
+add bhai
+
 2 rows in set (0.00 sec)
 

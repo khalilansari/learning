@@ -8,8 +8,7 @@
 
 
 		function volumeup(){
-			$this->volume++;
-			// echo "volume: ".$this->volume;
+			$this->volume++; 	// echo "volume: ".$this->volume;
 		}
 		function volumedown(){
 			$this->volume--;
@@ -24,6 +23,17 @@
 
 	}
 }
+
+class tablet extends mobile
+{
+	$cameraclick = 0;
+	function camerabutton(){
+		
+
+	} 
+
+}
+
 	$obj4 = new mobile(123,"bgb12",145);
 	echo $obj4->modelno."<br>";
 	echo $obj4->imeino."<br>";
